@@ -69,14 +69,6 @@ pipeline {
             }
         }
     }
-
-    post {
-        always {
-            node('') {
-                mailIfStatusChanged env.EMAIL_RECIPIENTS
-            }
-        }
-    }
 }
 
 void createPipelineTriggers() {
