@@ -22,11 +22,6 @@ node {
     junit allowEmptyResults: true,
             testResults: '**/target/surefire-reports/TEST-*.xml, **/target/failsafe-reports/*.xml'
 
-    statusChanged {
-        mail to: "${env.EMAIL_RECIPIENTS}",
-                subject: "${JOB_NAME} - Build #${BUILD_NUMBER} - ${currentBuild.currentResult}!",
-                body: "Check console output at ${BUILD_URL} to view the results."
-    }
 }
 
 def statusChanged(body) {
