@@ -37,7 +37,7 @@ node {
     junit allowEmptyResults: true,
             testResults: '**/target/surefire-reports/TEST-*.xml, **/target/failsafe-reports/*.xml'
 
-    mailIfStatusChanged env.EMAIL_RECIPIENTS
+    //mailIfStatusChanged env.EMAIL_RECIPIENTS
 }
 
 def createPipelineTriggers() {
