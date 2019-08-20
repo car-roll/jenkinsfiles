@@ -66,10 +66,6 @@ catchError {
     }
 }
 
-node {
-    mailIfStatusChanged env.EMAIL_RECIPIENTS
-}
-
 
 def createPipelineTriggers() {
     if (env.BRANCH_NAME == 'master') {
